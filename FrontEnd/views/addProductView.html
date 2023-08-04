@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/main-styles.css">
+    <link rel="stylesheet" href="./Styles/product-form.css">
+    <script src="../scripts/admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>VinylShop</h1>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/FrontEnd/views/index.html">Home</a></li>
+                <li><a href="#">Vinyls!</a></li>
+                <li><a href="#">Genres</a></li>
+                <li><a href="/FrontEnd/views/addProductView.html">Admin</a></li>
+            </ul>
+            
+        </nav>
+        <a class="cta" href="#"><button>Login</button></a>
+    </header>
+    <main>
+        <form class="product-form" enctype="multipart/form-data">
+            <div class="form-control">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="nameProduct">
+            </div>
+            <div class="form-control">
+                <label for="image">Image:</label>
+                <input type="file" id="imageInput" name="image" accept="image/*">
+            </div>
+            <div class="form-control">
+                <label for="price">Price:</label>
+                <input type="number" name="price" id="priceProduct">
+            </div>
+            <div class="form-control">
+                <label for="description">Description:</label>
+                <textarea name="Description" id="prodDecrip" cols="30" rows="10"></textarea>
+            </div>          
+            <button type="submit" id="add-product">Create Product</button>
+        </form>
+    </main>
+</body>
+</html>

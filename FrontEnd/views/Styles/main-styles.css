@@ -6,15 +6,16 @@
     padding: 0;
     background-color: #24252a;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 h1{
     color: whitesmoke;
 }
 
-li, a, button{ 
+li, a, button, h1{ 
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1.3rem;
     color: whitesmoke;
     text-decoration: none;
 }
@@ -24,7 +25,7 @@ header{
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 10px 10%;
 }
 .nav__links{
     list-style: none;
