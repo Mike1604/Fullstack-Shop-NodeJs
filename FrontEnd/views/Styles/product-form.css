@@ -4,13 +4,14 @@
 }
 
 .product-form {
+  background-color: #24252a;
   color: whitesmoke;
   width: 40rem;
   max-width: 90%;
   margin: 2rem auto 0;
   display: block;
   box-shadow: -5px 5px 15px rgba(0, 136, 169, 1);
-  border: 0.5px solid whitesmoke;
+  border: 0.5px solid rgb(160, 157, 157);
   padding: 1.5rem 2rem;
   border-radius: 14px;
 }
@@ -31,6 +32,7 @@
 
 .form-control input,
 .form-control textarea {
+  background-color: rgb(94, 90, 90);
   border: 1px solid whitesmoke;
   border-radius: 2px;
 }

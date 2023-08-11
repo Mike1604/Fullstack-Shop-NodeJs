@@ -40,4 +40,5 @@ addProductButton.addEventListener('click', async function(e){
     nameInput.value = "";
     numberInput.value = "";
     descrInput.value = "";
+    window.location.replace(`/FrontEnd/views/index.html`);
 });
