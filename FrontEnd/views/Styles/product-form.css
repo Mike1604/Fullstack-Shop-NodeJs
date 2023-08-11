@@ -1,0 +1,51 @@
+:root {
+  ---BCK-Color: hsl(310, 88%, 51%);
+  ---HOVER-COLOR: #9db2bf;
+}
+
+.product-form {
+  background-color: #24252a;
+  color: whitesmoke;
+  width: 40rem;
+  max-width: 90%;
+  margin: 2rem auto 0;
+  display: block;
+  box-shadow: -5px 5px 15px rgba(0, 136, 169, 1);
+  border: 0.5px solid rgb(160, 157, 157);
+  padding: 1.5rem 2rem;
+  border-radius: 14px;
+}
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  transition: all 0.2s;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.form-control input,
+.form-control textarea {
+  background-color: rgb(94, 90, 90);
+  border: 1px solid whitesmoke;
+  border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  background-color: rgb(61, 59, 59);
+  outline-color: rgba(0, 136, 169, 1);
+  font-size: 1.2rem;
+}
+
+.form-control input.invalid,
+.form-control textarea.invalid {
+  background-color: rgba(221, 122, 111, 0.5);
+  outline-color: red;
+}

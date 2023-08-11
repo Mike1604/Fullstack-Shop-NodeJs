@@ -4,30 +4,32 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #24252a;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 h1{
     color: whitesmoke;
 }
 
-li, a, button{ 
+li, a, button, h1{ 
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1.3rem;
     color: whitesmoke;
     text-decoration: none;
 }
 
 header{
+    background-color: #24252a;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 10px 5%;
 }
 .nav__links{
     list-style: none;
+    transition: all 0.2s;
 }
 
 .nav__links li{
@@ -36,11 +38,43 @@ header{
 }
 
 .nav__links li a{
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease-in;
 }
 
 .nav__links li a:hover{
     color: #0088a9;
+}
+.nav__buttons{
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.nav__cart{
+    transition: all 0.2s ease-in;
+    font-size: 2rem;
+    color: whitesmoke;
+    margin: 1rem;
+}
+.nav__cart:hover{
+    color: #0088a9;
+    font-size: 2.2rem;
+    transform: rotate(90deg);
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 35px;
+    height: 4px;
+    margin: 10px auto;
+    background-color: #0088a9;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 button{
     padding: 9px 25px;
@@ -54,3 +88,126 @@ button{
 button:hover{
     background-color: rgba(0,136,169,0.5);
 }
+
+body{
+    background-color: #565964;
+}
+
+#products-section{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.products-container{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0.5rem;
+    gap: 2rem 5px;
+}
+.card {
+    transition: all 0.2s;
+    min-width: 250px;
+    width: 20%;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+    background-color: #24252a;
+    border-radius: 14px;
+    color: whitesmoke;
+    overflow: hidden;
+}
+
+.card h1,
+.card p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card h2{
+    font-size: 1.5rem;
+}
+
+.actions-div{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.actions-div button{
+    padding: 6px 15px;
+    font-size: 1.3rem;
+    width: auto;
+}
+.card img{
+    width: 100%;
+}
+div.card:hover{
+    cursor: pointer;
+    scale: 1.1;
+    box-shadow: -2px 5px 15px #0088a9;
+}   
+.warning{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.warning h1{
+    font-size: 2rem;
+    padding: 3rem;
+    margin: 0 1rem;
+    border: 1px solid #565964;
+    background-color: #24252a;
+    border-radius: 15px;
+    box-shadow: 1px 10px 10px #0088a9;
+}
+
+@media (max-width: 850px) {
+    .nav__buttons{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-20px) rotate(-45deg);
+    }
+    .nav__links{
+        position: fixed;
+        left: -100%;
+        top: 72px;
+        gap: 0;
+        width: 0%;
+        background-color: #52545e;
+        width: 100%;
+        text-align: center;
+        transition: 0.4s all;
+        opacity: 0;
+    }
+    .nav__links li{
+        margin: 16px 0;
+    }
+    .nav__links.active{
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+        opacity: 1;
+    }
+
+}
+  
